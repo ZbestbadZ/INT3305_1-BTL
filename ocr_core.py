@@ -9,7 +9,7 @@ def ocr_core(filename):
     """
     This function will handle the core OCR processing of images.
     """
-    # text = pytesseract.image_to_string(Image.open(filename))  # We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
+    # We'll use Image class to open the image and pytesseract to detect the string in the image
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
     value = Image.open(filename)
     text = pytesseract.image_to_string(value, config='')
